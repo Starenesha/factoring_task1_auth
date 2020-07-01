@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if user.is_employee %}
+        <p class="title">
+          Добрый день, {{ user.first_name }} {{ user.last_name }}! Ваш отдел {{ user.depart }}
+        </p>
+    {% else %}
+        <p class="title">
+          Добрый день, {{ user.first_name }} {{ user.last_name }}!
+        </p>
+    {% endif %}
+{% endblock %}
